@@ -1,88 +1,81 @@
-Stress Level Prediction System using Random Forest and Streamlit
-Overview
+Stress Level Prediction System
+Project Overview
 
-The Stress Level Prediction System is a machine learning application designed to predict an individual's stress level based on various input features. The project uses the Random Forest algorithm for accurate stress level prediction and Streamlit to provide a simple, interactive, and user-friendly web interface. Users can enter the required information through the application and instantly receive a predicted stress level.
+The Stress Level Prediction System is a machine learning application developed to predict an individual's stress level based on user-provided information. The project uses two supervised machine learning algorithms—K-Nearest Neighbors (KNN) and Decision Tree—to classify stress levels accurately. The application features an interactive web interface built with Streamlit, allowing users to enter their details and receive instant predictions.
 
 Features
-Predicts stress levels using a Random Forest machine learning model.
-Interactive web interface built with Streamlit.
-Fast and accurate predictions.
-Simple and easy-to-use interface.
-Real-time prediction results.
-Easy to customize and extend.
+Predicts stress levels using machine learning.
+Supports both KNN and Decision Tree algorithms.
+Interactive and user-friendly interface developed with Streamlit.
+Real-time prediction based on user inputs.
+Fast and efficient performance.
+Easy to extend with additional models and features.
 Technologies Used
-Programming Language: Python
-Frontend: Streamlit
-Machine Learning: Random Forest (Scikit-learn)
-Libraries: Pandas, NumPy, Scikit-learn, Pickle
+Python
+Streamlit
+Scikit-learn
+Pandas
+NumPy
+Joblib
+Machine Learning Models
+K-Nearest Neighbors (KNN)
+
+KNN is a supervised learning algorithm that classifies a new data point by comparing it with its nearest neighbors in the training dataset. The predicted class is determined by the majority vote of the nearest neighbors.
+
+Decision Tree
+
+Decision Tree is a supervised learning algorithm that predicts the output by creating a tree-like structure of decisions. It splits the data based on feature values and follows decision rules until a final prediction is reached.
+
+How the System Works
+The user opens the Streamlit web application.
+The user enters the required input values.
+The input data is preprocessed.
+The selected machine learning model (KNN or Decision Tree) analyzes the data.
+The application predicts the user's stress level.
+The prediction is displayed instantly on the screen.
 Project Structure
-Stress-Prediction/
-│── app.py                  # Streamlit application
-│── train_model.py          # Model training script
-│── random_forest_model.pkl # Trained Random Forest model
-│── dataset.csv             # Dataset used for training
-│── requirements.txt        # Required Python packages
-│── README.md               # Project documentation
+app.py – Streamlit application.
+train_model.py – Script used to train the machine learning models.
+knn_model.pkl – Saved KNN model.
+decision_tree.pkl – Saved Decision Tree model.
+dataset.csv – Dataset used for training and testing.
+requirements.txt – List of required Python libraries.
+README.md – Project documentation.
 Installation
 Clone or download the project.
-Open the project folder in your terminal.
-Install the required dependencies:
+Install the required libraries using:
 pip install -r requirements.txt
-
-If you do not have a requirements.txt file, install the libraries manually:
-
-pip install streamlit pandas numpy scikit-learn
-Running the Application
-
-Start the Streamlit application using the following command:
-
+Run the Streamlit application:
 streamlit run app.py
+Expected Input
 
-The application will launch in your default web browser. If it does not open automatically, visit:
-
-http://localhost:8501
-How It Works
-The user enters the required input values through the Streamlit interface.
-The application preprocesses the input data.
-The trained Random Forest model predicts the stress level.
-The prediction is displayed instantly on the screen.
-Machine Learning Workflow
-Data Collection
-Data Preprocessing
-Feature Selection
-Model Training using Random Forest
-Model Evaluation
-Model Saving using Pickle
-Deployment using Streamlit
-Input Features
-
-The application accepts various user inputs related to stress, such as:
+The application accepts user information such as:
 
 Age
 Gender
 Sleep Duration
 Working Hours
 Physical Activity
-Academic or Work Pressure
-Lifestyle Factors
-Other health-related attributes
-
-Note: Update this section based on the actual features used in your dataset.
-
+Study Hours
+Screen Time
+Social Interaction
+Other stress-related features included in the dataset
 Output
 
-The model predicts the user's stress level, which may be classified as:
+The application predicts the user's stress level, such as:
 
 Low Stress
 Moderate Stress
 High Stress
+Advantages
+Simple and easy-to-use interface.
+Quick and accurate stress prediction.
+Compares two popular machine learning algorithms.
+Suitable for educational and research purposes.
+Can be expanded with additional features and models.
 Future Enhancements
-Improve prediction accuracy using feature engineering.
-Add data visualization and analytics.
-Deploy the application to the cloud.
-Include personalized stress management recommendations.
-Compare Random Forest with other machine learning algorithms.
-Conclusion
-
-This project demonstrates how machine learning can be used to predict stress levels through a simple and interactive web application. By combining the Random Forest algorithm with Streamlit, the system provides accurate predictions and an easy-to-use interface, making it suitable for educational purposes and as a foundation for future healthcare and wellness applications.
-
+Improve prediction accuracy with advanced algorithms.
+Add graphical visualizations of results.
+Deploy the application online using Streamlit Cloud.
+Store user prediction history.
+Include more health and lifestyle parameters for better prediction.
